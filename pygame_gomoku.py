@@ -161,7 +161,7 @@ class GomokuGame:
                 self.game_over = True
                 self.winner = None
             else:
-                # Switch player: 1 -> 2, 2 -> 1
+                # swtich player: 1 -> 2, 2 -> 1
                 self.current_player = (self.current_player % 2) + 1
     
     def restart_game(self):
@@ -205,7 +205,7 @@ class GomokuGame:
                 if event.type == pygame.QUIT:
                     running = False
                 elif event.type == pygame.MOUSEBUTTONDOWN:
-                    if self.current_player == PLAYER_WHITE:  # Human player
+                    if self.current_player == PLAYER_WHITE:  # human player
                         self.process_click(pos)
                 elif event.type == pygame.KEYDOWN:
                     if event.key == pygame.K_r:
